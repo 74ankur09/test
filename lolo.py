@@ -30,6 +30,8 @@ def predict():
     data = pd.DataFrame(data1)
     data = data.drop(['Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 13', 'Unnamed: 14'], axis=1)
     data = data.drop([0])
+    ##Added Line 
+    data=data.replace(to_replace =["Fungal Infection"], value ="Fungal infection")
     '''data3 = data.set_index('DISEASE')'''
     data4 = data.set_index('DISEASE')
 
